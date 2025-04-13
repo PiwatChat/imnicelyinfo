@@ -1,0 +1,119 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212; /* Dark background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 70%;
+    max-width: 300px;
+    background: transparent;
+    border: 2px solid #095dac;
+    box-shadow: 0 0 10px #095dac, 0 0 20px #095dac;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #1b7fdd;
+    color: #000;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #1b7fdd, 0 0 40px #1b7fdd;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ใช้ class นี้สำหรับการ fade in */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* ตั้ง delay เพื่อให้แอนิเมชันเรียงตามลำดับ */
+.fade-in.delay-1 { animation-delay: 0.2s; }
+.fade-in.delay-2 { animation-delay: 0.4s; }
+.fade-in.delay-3 { animation-delay: 0.6s; }
+.fade-in.delay-4 { animation-delay: 0.8s; }
